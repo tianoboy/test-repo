@@ -19,5 +19,6 @@ module "my_ec2" {
   instance_type = "t2.micro"
   subnet_id     = "${module.my_vpc.subnet_id}"
   vpc_id = "${module.my_vpc.vpc_id}"
+  disable_api_termination = true
 #  availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
